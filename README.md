@@ -23,6 +23,7 @@ Beyond is good to has an editor for to work with the code like [VSCode](https://
   - [1.2. Auxiliary libs](#12-auxiliary-libs)
 - [2. How To Run](#2-🔬-how-to-run)
   - [2.1 Containers](#21-containers)
+  - [2.2 Local](#22-local)
 - [3. Recommended Extensions](#3-recommended-extensions)
 
 # 1. Overview
@@ -56,14 +57,8 @@ $ git clone https://github.com/LucasJunio/pokedex
 # Acces the project folder in your terminal/cmd
 $ cd pokedex
 
-# Copy base.env to .env
-$ cp base.env .env
-
-# Build the image docker
-$ docker build -t pokedex .
-
-# Build the container docker
-$ docker run -p 3000:3000 pokedex
+# Build the image docker with Hot reloading / live reloading in development
+$ docker-compose up -d --build
 
 ```
 

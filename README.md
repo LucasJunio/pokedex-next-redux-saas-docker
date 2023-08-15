@@ -27,7 +27,9 @@ Beyond is good to has an editor for to work with the code like [VSCode](https://
 
 # 1. Overview
 
-Pokedex is an API to open a new &quot;current account&quot; of already existing customers, see diagram entity relationship for documentation in ./docs/der-bank.png
+A Pokédex is an electronic device used in the Pokémon franchise, which is a popular media franchise created by Nintendo, Game Freak, and Creatures. The franchise revolves around fictional creatures called "Pokémon," which humans, known as "trainers," catch and train to battle each other for sport.
+
+The Pokédex serves as an encyclopedia or database that provides information about different species of Pokémon. It's a tool that trainers use to learn more about the characteristics, abilities, evolutions, habitats, and other details of various Pokémon species.
 
 ## 1.1. Stack
 

@@ -35,7 +35,7 @@ The Pokédex serves as an encyclopedia or database that provides information abo
 ## 1.1. Stack
 
 - [Typescript](https://www.typescriptlang.org/.docs/handbook/typescript-in-5-minutes.html)
-- [Node](https://nodejs.org/en/about/) >= v16.13.1
+- [Node](https://nodejs.org/en/about/) >= v18.17.1
 - [GitHub](https://github.com/)
 - [Docker](https://www.docker.com/resources/what-container)
 - [Next.js](https://nextjs.org)

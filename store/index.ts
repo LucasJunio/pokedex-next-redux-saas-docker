@@ -1,5 +1,6 @@
 "use client";
 import { configureStore } from "@reduxjs/toolkit";
+import pokemonReducer from "./ducks/Pokemon";
 
 export const store = configureStore({
   reducer: {

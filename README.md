@@ -136,6 +136,19 @@ $ git checkout -b feature/TASK-1
 
 You can check out a list of recommended extensions in the file `.vscode/extensions.json`, or by opening the "Extensions" Tab in the "Recommended" pane.
 
+# 5. Software architecture
+
+Main folder tree and your goals
+
+C:.
+├───.docs - This folder may contain project-related documentation
+├───.vscode - This folder can contain the application's services
+├───app - The app folder likely contains the core application code.
+├───components - This folder is usually for reusable UI components
+├───services - This folder can contain the application's services.
+├───store - This folder could house the state management.
+└───utils - This folder can contain utilities or helper tools.
+
 ---
 
 ## 🦸 Author

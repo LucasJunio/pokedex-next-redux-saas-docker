@@ -23,8 +23,10 @@ Beyond is good to has an editor for to work with the code like [VSCode](https://
   - [1.2. Auxiliary libs](#12-auxiliary-libs)
 - [2. How To Run](#2-🔬-how-to-run)
   - [2.1 Containers](#21-containers)
+    - [2.1.1 How to add a new library in containers](#211-new-library)
   - [2.2 Local](#22-local)
-- [3. Recommended Extensions](#3-recommended-extensions)
+- [3. How to create a new branch](#3-new-branch)
+- [4. Recommended Extensions](#4-recommended-extensions)
 
 # 1. Overview
 
@@ -44,6 +46,9 @@ The Pokédex serves as an encyclopedia or database that provides information abo
 ## 1.2. Auxiliary libs
 
 - [Tailwind](https://tailwindcss.com/)
+- [React-redux](https://react-redux.js.org/)
+- [Reduxjs-toolkit](https://redux-toolkit.js.org/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
 
 # 2. 🔬 How To Run
 
@@ -57,12 +62,46 @@ $ git clone https://github.com/LucasJunio/pokedex
 # Acces the project folder in your terminal/cmd
 $ cd pokedex
 
-# Build the image docker with Hot reloading / live reloading in development
+# Build the image/container docker with Hot reloading / live reloading in development
 $ docker-compose up -d --build
 
 ```
 
 The aplication going to open in port:3000 - access [http://localhost:3000](http://localhost:3000)
+
+### 2.1. How to add a new library in containers
+
+Add a new library inside your container running live reload it's very symple, need just two steps:
+
+First:
+
+Add your libraries and versions (preference LTS) inside the package.json
+
+Second:
+
+At the very least you need to stop the current container from the pokedex application, to release used port
+
+```bash
+
+# (Optional) Delete your container and image docker for optimization
+$ docker stop container_name_to_exclude
+$ docker rm container_name_to_exclude
+$ docker rmi IMAGE_NAME_OR_ID
+
+# (Optional) Or just delete all containers and images
+$ docker rm -f $(docker ps -aq)
+$ docker rmi $(docker images -q)
+
+# (Mandatory) Build the image/container docker with Hot reloading / live reloading in development
+$ docker-compose up -d --build
+
+```
+
+-
+
+Result:
+
+![Add a new library](.docs\gifs\add-new-library.gif)
 
 ## 2.2. Local
 
@@ -80,7 +119,20 @@ $ yarn dev
 
 The aplication going to open in port:3000 - access [http://localhost:3000](http://localhost:3000)
 
-# 3. Recommended Extensions
+# 3. How to create a new branch
+
+Let's go to follow the git flow patterns to create a new branch, to more info browse in link below to learn more how to implement in simple way.
+
+https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow
+
+```bash
+
+# Example creating a new branch
+$ git checkout -b feature/TASK-1
+
+```
+
+# 4. Recommended Extensions
 
 You can check out a list of recommended extensions in the file `.vscode/extensions.json`, or by opening the "Extensions" Tab in the "Recommended" pane.
 

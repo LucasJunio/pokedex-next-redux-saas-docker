@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Providers from "./providers";
-import ThemeSwitcher from "./ThemeSwitcher";
+import Providers from "../utils/Providers";
+import ThemeSwitcher from "../components/ThemeSwitcher";
 
 export const metadata: Metadata = {
   title: "Create Next App",

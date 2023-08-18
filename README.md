@@ -26,7 +26,8 @@ Beyond is good to has an editor for to work with the code like [VSCode](https://
     - [2.1.1 How to add a new library in containers](#211-new-library)
   - [2.2 Local](#22-local)
 - [3. How to create a new branch](#3-new-branch)
-- [4. Recommended Extensions](#4-recommended-extensions)
+- [5. Software Architecture](#4-software-architecture)
+- [5. Recommended Extensions](#5-recommended-extensions)
 
 # 1. Overview
 
@@ -132,22 +133,22 @@ $ git checkout -b feature/TASK-1
 
 ```
 
-# 4. Recommended Extensions
-
-You can check out a list of recommended extensions in the file `.vscode/extensions.json`, or by opening the "Extensions" Tab in the "Recommended" pane.
-
-# 5. Software architecture
+# 4. Software Architecture
 
 Main folder tree and your goals
 
 C:.
-├───.docs - This folder may contain project-related documentation
-├───.vscode - This folder can contain the application's services
-├───app - The app folder likely contains the core application code.
-├───components - This folder is usually for reusable UI components
-├───services - This folder can contain the application's services.
-├───store - This folder could house the state management.
-└───utils - This folder can contain utilities or helper tools.
+- ├───.docs - This folder may contain project-related documentation
+- ├───.vscode - This folder can contain the application's services
+- ├───app - The app folder likely contains the core application code.
+- ├───components - This folder is usually for reusable UI components
+- ├───services - This folder can contain the application's services.
+- ├───store - This folder could house the state management.
+- └───utils - This folder can contain utilities or helper tools.
+
+# 5. Recommended Extensions
+
+You can check out a list of recommended extensions in the file `.vscode/extensions.json`, or by opening the "Extensions" Tab in the "Recommended" pane.
 
 ---
 

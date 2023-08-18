@@ -69,7 +69,7 @@ $ docker-compose up -d --build
 
 The aplication going to open in port:3000 - access [http://localhost:3000](http://localhost:3000)
 
-### 2.1. How to add a new library in containers
+### 2.1.1 How to add a new library in containers
 
 Add a new library inside your container running live reload it's very symple, need just two steps:
 
@@ -101,7 +101,7 @@ $ docker-compose up -d --build
 
 Result:
 
-![Add a new library](.docs\gifs\add-new-library.gif)
+![Add a new library](.docs/gifs/add-new-library.gif)
 
 ## 2.2. Local
 
@@ -123,7 +123,7 @@ The aplication going to open in port:3000 - access [http://localhost:3000](http:
 
 Let's go to follow the git flow patterns to create a new branch, to more info browse in link below to learn more how to implement in simple way.
 
-https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow
+Workflow gitflow: https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow
 
 ```bash
 

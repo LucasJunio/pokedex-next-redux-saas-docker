@@ -4,8 +4,8 @@
   
     // List of extensions which should be recommended for users of this workspace.
     "recommendations": [
-      "bradlc.vscode-tailwindcss",
       "dsznajder.es7-react-js-snippets",
+      "vivaxy.vscode-conventional-commits",
     ]
   }
   

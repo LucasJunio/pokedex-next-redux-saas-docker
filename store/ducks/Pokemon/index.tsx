@@ -10,7 +10,7 @@ export const findAllPokemons = createAsyncThunk(
 );
 
 const initialState = {
-  data: null,
+  pokemons: null,
   status: "idle",
 };
 
@@ -27,7 +27,7 @@ const poke = createSlice({
         return (state = {
           ...state,
           status: "completed",
-          data: action.payload?.data,
+          pokemons: action.payload?.data,
         });
       })
       .addCase(findAllPokemons.rejected, (state: any, action: any) => {

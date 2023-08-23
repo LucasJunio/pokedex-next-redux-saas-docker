@@ -102,7 +102,7 @@ $ docker-compose up -d --build
 
 Result:
 
-![Add a new library](.docs/gifs/add-new-library.gif)
+![Add a new library](public.docs\gifs\add-new-library.gif)
 
 ## 2.2. Local
 
@@ -122,6 +122,8 @@ The aplication going to open in port:3000 - access [http://localhost:3000](http:
 
 # 3. How to create a new branch
 
+Ever that's necessary to create a new branch feature, create by [main]branch, implement your development, merge this feature/branch to develop, when all it's ok, give a merge of this feature/branch to main[branch].
+
 Let's go to follow the git flow patterns to create a new branch, to more info browse in link below to learn more how to implement in simple way.
 
 Workflow gitflow: https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow
@@ -133,17 +135,30 @@ $ git checkout -b feature/TASK-1
 
 ```
 
+## 3.1. Commits
+
+For commit your changes, you can follow the suggestion to use conventional commits [https://www.conventionalcommits.org/en/v1.0.0/] for to improve your commit descriptions and help the understand of the team. Exist a extension in vscode that can help you with this mission.
+
+vscode extension id in .vscode\extensions.json:
+
+"recommendations": ["vivaxy.vscode-conventional-commits"]
+
 # 4. Software Architecture
 
 Main folder tree and your goals
 
 C:.
-- ├───.docs - This folder may contain project-related documentation
-- ├───.vscode - This folder can contain the application's services
-- ├───app - The app folder likely contains the core application code.
-- ├───components - This folder is usually for reusable UI components
+
+- ├───app - entry point of your application, where you start your app.
+- ├───components - This is where you would put your reusable React components.
+- │ ├───base - Components that are used by all application
+- │ ├───common - General-purpose components that can be reused across containers and different parts of the application.
+- │ ├───containers - Components that combine smaller components to create more complex UI elements or pages.
+- ├───public - Static assets like images, fonts, or other resources that are publicly accessible.
+- │ ├───.docs - This folder may contain project-related documentation.
 - ├───services - This folder can contain the application's services.
 - ├───store - This folder could house the state management.
+- ├───types - TypeScript type definitions that help ensure type safety in your codebase.
 - └───utils - This folder can contain utilities or helper tools.
 
 # 5. Recommended Extensions

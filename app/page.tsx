@@ -1,4 +1,4 @@
-import PokemonCard from "@/components/containers/PokemonCard";
+import PokemonCard from "@/components/containers/PokemonCard/PokemonCard";
 
 export default function Home() {
   return (

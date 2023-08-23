@@ -47,7 +47,7 @@ The Pokédex serves as an encyclopedia or database that provides information abo
 
 ## 1.2. Auxiliary libs
 
-- [Tailwind](https://tailwindcss.com/)
+- [SASS](https://sass-lang.com/)
 - [React-redux](https://react-redux.js.org/)
 - [Reduxjs-toolkit](https://redux-toolkit.js.org/)
 - [Axios](https://axios-http.com/ptbr/docs/intro)

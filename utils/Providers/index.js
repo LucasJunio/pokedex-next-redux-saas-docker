@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { ThemeProvider } from "next-themes";
 import { reduxProvider } from "../../store/reduxProvider";
 
 export default function Providers({ children }) {
@@ -14,9 +13,5 @@ export default function Providers({ children }) {
     return <>{children}</>;
   }
 
-  return (
-    <reduxProvider>
-      <ThemeProvider attribute="class">{children}</ThemeProvider>;
-    </reduxProvider>
-  );
+  return <reduxProvider>{children};</reduxProvider>;
 }

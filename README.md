@@ -103,7 +103,7 @@ $ docker-compose up -d --build
 
 Result:
 
-![Add a new library](public.docs/gifs/add-new-library.gif)
+![Add a new library](public/.docs/gifs/add-new-library.gif)
 
 ## 2.2. Local
 

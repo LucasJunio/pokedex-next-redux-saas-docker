@@ -26,6 +26,7 @@ Beyond is good to has an editor for to work with the code like [VSCode](https://
     - [2.1.1 How to add a new library in containers](#211-new-library)
   - [2.2 Local](#22-local)
 - [3. How to create a new branch](#3-new-branch)
+  - [3.1 Commits](#31-commits)
 - [5. Software Architecture](#4-software-architecture)
 - [5. Recommended Extensions](#5-recommended-extensions)
 
@@ -102,7 +103,7 @@ $ docker-compose up -d --build
 
 Result:
 
-![Add a new library](public.docs\gifs\add-new-library.gif)
+![Add a new library](public.docs/gifs/add-new-library.gif)
 
 ## 2.2. Local
 
@@ -139,7 +140,7 @@ $ git checkout -b feature/TASK-1
 
 For commit your changes, you can follow the suggestion to use conventional commits [https://www.conventionalcommits.org/en/v1.0.0/] for to improve your commit descriptions and help the understand of the team. Exist a extension in vscode that can help you with this mission.
 
-vscode extension id in .vscode\extensions.json:
+vscode extension id in .vscode/extensions.json:
 
 "recommendations": ["vivaxy.vscode-conventional-commits"]
 

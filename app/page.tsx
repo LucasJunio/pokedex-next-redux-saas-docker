@@ -1,4 +1,5 @@
 import PokemonCard from "@/components/containers/PokemonCard/PokemonCard";
+import TestContainer from "@/components/containers/TestContainer/TestContainer";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
           <section>
             <div className="home__cars-wrapper">
               <PokemonCard />
+
+              <TestContainer />
             </div>
           </section>
         ) : (

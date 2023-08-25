@@ -1,36 +1,38 @@
+"use client";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { getAllPokemons } from "./service";
+import { getPokemonsArrayOfData } from "./service";
+import PokemonEntity from "@/utils//entities/pokemon_entity/entity/PokemonEntity";
 
-export const findAllPokemons = createAsyncThunk(
-  "poke/findAllPokemons",
+export const findPokemonsArrayOfData = createAsyncThunk(
+  "poke/findPokemonsArrayOfData",
   async () => {
-    const { data } = await getAllPokemons();
+    const data: PokemonEntity[] = await getPokemonsArrayOfData();
     return data;
   }
 );
 
 const initialState = {
-  pokemons: null,
+  arrayOfPokemons: Array<PokemonEntity>,
   status: "idle",
 };
 
-const poke = createSlice({
-  name: "poke",
+const pokemon = createSlice({
+  name: "pokemon",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(findAllPokemons.pending, (state: any) => {
+      .addCase(findPokemonsArrayOfData.pending, (state: any) => {
         return (state = { ...state, status: "loading" });
       })
-      .addCase(findAllPokemons.fulfilled, (state: any, action: any) => {
+      .addCase(findPokemonsArrayOfData.fulfilled, (state: any, action: any) => {
         return (state = {
           ...state,
           status: "completed",
-          pokemons: action.payload?.data,
+          arrayOfPokemons: action.payload,
         });
       })
-      .addCase(findAllPokemons.rejected, (state: any, action: any) => {
+      .addCase(findPokemonsArrayOfData.rejected, (state: any, action: any) => {
         if (action.error?.code === "ECONNABORTED") {
           return (state = { ...state });
         }
@@ -43,4 +45,4 @@ const poke = createSlice({
   },
 });
 
-export default poke.reducer;
+export default pokemon.reducer;

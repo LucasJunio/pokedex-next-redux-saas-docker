@@ -1,0 +1,121 @@
+:root{
+
+    // Primary Color
+
+    $primary-color-100: #FCDFCF;
+    $primary-color-200: #F79F6E;
+    $primary-color-400: #DB4F00;
+    $primary-color-600: #993700;
+    $primary-color-800: #662500;
+    $primary-color-1000: #331200;
+
+    // Secondary Color
+
+    $secondary-color-100: #CFD0FC;
+    $secondary-color-200: #6E73F7;
+    $secondary-color-400: #0009DB;
+    $secondary-color-600: #000699;
+    $secondary-color-800: #000466;
+    $secondary-color-1000: #000233;
+
+    // Neutral Color
+
+    $neutral-color-100: #F7F7F7;
+    $neutral-color-200: #E6E6E6;
+    $neutral-color-400: #B3B3B3;
+    $neutral-color-600: #6E6E6E;
+    $neutral-color-800: #4D4D4D;
+    $neutral-color-1000: #1A1A1A;
+
+    //Pokemon Type Color
+
+    $grass-100: #BBECBA;
+    $grass-300: #71BD70;
+    $grass-label: #9BCC50;
+
+    $fire-100: #F1D5C1;
+    $fire-300: #CD8049;
+    $fire-label: #FD7D24;
+
+    $water-100: #BAE9EC;
+    $water-300: #70BDBD;
+    $water-label: #4592C4;
+
+    $electric-100: #FBF1D5;
+    $electric-300: #F0CB65;
+    $electric-label: #EED535;
+    
+    $bug-100: #D7ECBA;
+    $bug-300: #9DBD70;
+    $bug-label: #729F3F;
+
+    $ground-100: #ECE2BA;
+    $ground-300: #BDAE70;
+    $ground-label: #AB9842;
+
+    $rock-100: #ECE3BA;
+    $rock-300: #CBB862;
+    $rock-label: #DEC44E;
+
+    $poison-100: #DFBAEC;
+    $poison-300: #A970BD;
+    $poison-label: #B97FC9;
+
+    $normal-100: #F2F2F2;
+    $normal-300: #B3B3B3;
+    $normal-label: #DCDCDC;
+
+    $psychic-100: #ECBAE7;
+    $psychic-300: #BD70B5;
+    $psychic-label: #F366B9;
+
+    $ghost-100: #CFBAEC;
+    $ghost-300: #9270CF;
+    $ghost-label: #7B62A3;
+
+    $steel-100: #CFD6D6;
+    $steel-300: #8E9E9F;
+    $steel-label: #9EB7B8;
+
+    $dark-100: #D3D3D3;
+    $dark-300: #969696;
+    $dark-label: #707070;
+
+    $fairy-100: #ECBADD;
+    $fairy-300: #BD70A6;
+    $fairy-label: #FDB9E9;
+
+    $fighting-100: #ECCDBA;
+    $fighting-300: #BD8D70;
+    $fighting-label: #B85314;
+
+    $ice-100: #BAECE9;
+    $ice-300: #70BDB8;
+    $ice-label: #8AD7EE;
+
+    $flying-100: #B0D8ED;
+    $flying-300: #52B5D1;
+    $flying-label: linear-gradient(180deg, #26CDFD 0%, #DCDCDC 100%);
+
+    $dragon-100: #F5BCB2;
+    $dragon-300: #ED8573;
+    $dragon-label: linear-gradient(180deg, #F16E57 0%, #53A4CF 100%);
+   
+    //Font Sizes
+    
+    $font-heading0: 72px;
+    $font-heading1: 48px;
+    $font-heading2: 32px;
+    $font-heading3: 24px;
+    $font-heading4: 18px;
+    $font-paragraph: 16px;
+
+    //Spacing
+
+    $spacing-xs: 8px;
+    $spacing-s: 16px;
+    $spacing-m: 24px;
+    $spacing-l: 32px;
+    $spacing-xl: 40px;
+    $spacing-xxl: 48px;
+}

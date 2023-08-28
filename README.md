@@ -157,14 +157,15 @@ Main folder tree and your goals
 
 C:.
 
+- ├───.vscode - configuration settings specific to the Visual Studio Code (VS Code).
 - ├───app - entry point of your application, where you start your app.
 - ├───components - This is where you would put your reusable React components.
 - │ ├───base - Components that are used by all application
 - │ ├───common - General-purpose components that can be reused across containers and different parts of the application.
 - │ ├───containers - Components that combine smaller components to create more complex UI elements or pages.
+- ├───constants - storing and managing constant values, such as configuration settings.
 - ├───public - Static assets like images, fonts, or other resources that are publicly accessible.
 - │ ├───.docs - This folder may contain project-related documentation.
-- ├───services - This folder can contain the application's services.
 - ├───store - This folder could house the state management.
 - ├───types - TypeScript type definitions that help ensure type safety in your codebase.
 - └───utils - This folder can contain utilities or helper tools.

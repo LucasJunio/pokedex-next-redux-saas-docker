@@ -21,6 +21,7 @@ Beyond is good to has an editor for to work with the code like [VSCode](https://
 - [1. Overview](#1-overview)
   - [1.1 Stack](#11-stack)
   - [1.2. Auxiliary libs](#12-auxiliary-libs)
+  - [1.3. Figma](#13-figma)
 - [2. How To Run](#2-🔬-how-to-run)
   - [2.1 Containers](#21-containers)
     - [2.1.1 How to add a new library in containers](#211-new-library)
@@ -51,6 +52,12 @@ The Pokédex serves as an encyclopedia or database that provides information abo
 - [React-redux](https://react-redux.js.org/)
 - [Reduxjs-toolkit](https://redux-toolkit.js.org/)
 - [Axios](https://axios-http.com/ptbr/docs/intro)
+
+## 1.3. Figma
+
+Our project was developed with the best pratices from UI/UX that you can see more details in link bellow:
+
+Link: [Pokedex Figma](https://www.figma.com/file/xleT1Joen52aqVZ0yqRA9d/Pokedex?type=design&node-id=0-1&mode=design)
 
 # 2. 🔬 How To Run
 

@@ -26,6 +26,15 @@ async function getArrayOfPokemonDataWithCompleteInformation(
       )
     ).data;
 
+    const { flavor_text_entries } = (
+      await axios.get<FullDataOfUniquePokemon>(
+        "https://pokeapi.co/api/v2/pokemon-species/" +
+          arrayOfAllPokemon.results[i].name
+      )
+    ).data;
+
+    console.log(flavor_text_entries[0].language.name === "en");
+
     arrayOfPokemonDataWithCompleteInformation.push(
       PokemonEntityFactory.getPokemonEntity(
         id,

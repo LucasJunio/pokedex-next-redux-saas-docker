@@ -3,6 +3,11 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { getPokemonsArrayOfData } from "./service";
 import PokemonEntity from "@/utils//entities/pokemon_entity/entity/PokemonEntity";
 
+interface InitialState {
+  arrayOfPokemons: PokemonEntity[];
+  status: string;
+}
+
 export const findPokemonsArrayOfData = createAsyncThunk(
   "poke/findPokemonsArrayOfData",
   async () => {
@@ -11,8 +16,8 @@ export const findPokemonsArrayOfData = createAsyncThunk(
   }
 );
 
-const initialState = {
-  arrayOfPokemons: Array<PokemonEntity>,
+const initialState: InitialState = {
+  arrayOfPokemons: [],
   status: "idle",
 };
 

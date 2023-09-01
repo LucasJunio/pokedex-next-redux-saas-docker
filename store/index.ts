@@ -6,6 +6,13 @@ export const store = configureStore({
   reducer: {
     pokemon: pokemonReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: ["poke/findPokemonsArrayOfData/fulfilled"],
+        ignoredPaths: ["pokemon.arrayOfPokemons"],
+      },
+    }),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

@@ -16,8 +16,9 @@ const pokemonDetails = () => {
 
   return (
     <div>
-      pokemonDetails {` result: ` + JSON.stringify(arrayOfPokemons[24])}
-      <div>
+      pokemon details
+      {/* pokemonDetails {` result: ` + JSON.stringify(arrayOfPokemons[24])} */}
+      {/* <div>
         <h1>Id: {JSON.stringify(arrayOfPokemons[24]?.pokemonId)}</h1>
       </div>
       <div>
@@ -32,7 +33,7 @@ const pokemonDetails = () => {
       </div>
       <div>
         <h1>Descrição: {JSON.stringify(arrayOfPokemons[24]?.pokemonId)}</h1>
-      </div>
+      </div> */}
     </div>
   );
 };

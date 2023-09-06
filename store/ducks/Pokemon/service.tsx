@@ -8,7 +8,9 @@ import PokemonEntityFactory from "@/utils/entities/pokemon_entity/factory/Pokemo
 import {
   GENERAL_POKEMON_ARRAY_URL,
   POKEMON_BASE_URL,
+  SPECIES_POKEMON_ARRAY_URL,
 } from "@/constants/entities/pokemon/pokemonsUrlsConstants";
+import { ComplementaryDataOfUniquePokemon } from "@/types/pokemon/ComplementaryDataOfUniquePokemon";
 
 async function getArrayOfPokemonDataWithCompleteInformation(
   arrayOfAllPokemon: ArrayOfGeneralsPokemons
@@ -26,12 +28,21 @@ async function getArrayOfPokemonDataWithCompleteInformation(
       )
     ).data;
 
+    const { flavor_text_entries, gender_rate, genera } = (
+      await axios.get<ComplementaryDataOfUniquePokemon>(
+        SPECIES_POKEMON_ARRAY_URL + arrayOfAllPokemon.results[i].name
+      )
+    ).data;
+
     arrayOfPokemonDataWithCompleteInformation.push(
       PokemonEntityFactory.getPokemonEntity(
         id,
         forms[FIRST_INDEX_OF_THE_ARRAY].name,
         sprites.versions["generation-v"]["black-white"].animated.front_default,
-        types
+        types,
+        flavor_text_entries,
+        gender_rate,
+        genera
       )
     );
   }

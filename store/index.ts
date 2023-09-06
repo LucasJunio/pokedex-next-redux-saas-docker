@@ -1,19 +1,25 @@
 "use client";
 import { configureStore } from "@reduxjs/toolkit";
-import pokemonReducer from "./ducks/Pokemon";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import rootReducer from "./reducers";
+
+const persistConfig = {
+  key: "pokedex",
+  storage,
+  blacklist: [""],
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: {
-    pokemon: pokemonReducer,
-  },
+  reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: ["poke/findPokemonsArrayOfData/fulfilled"],
-        ignoredPaths: ["pokemon.arrayOfPokemons"],
-      },
+      serializableCheck: false,
     }),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispach;
+export const persistor = persistStore(store);

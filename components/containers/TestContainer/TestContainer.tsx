@@ -1,6 +1,5 @@
 "use client";
-import { findPokemonsArrayOfData } from "@/store/ducks/Pokemon";
-import PokemonEntity from "@/utils/entities/pokemon_entity/entity/PokemonEntity";
+import { findAllPokemonsArrayOfData } from "@/store/ducks/Pokemon";
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -14,7 +13,7 @@ const TestContainer = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        await dispatch(findPokemonsArrayOfData());
+        await dispatch(findAllPokemonsArrayOfData());
       } catch (error) {
         console.log(error);
       }

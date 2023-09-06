@@ -8,8 +8,8 @@ interface InitialState {
   status: string;
 }
 
-export const findPokemonsArrayOfData = createAsyncThunk(
-  "poke/findPokemonsArrayOfData",
+export const findAllPokemonsArrayOfData = createAsyncThunk(
+  "poke/findAllPokemonsArrayOfData ",
   async () => {
     const data: PokemonEntity[] = await getPokemonsArrayOfData();
     return data;
@@ -27,26 +27,32 @@ const pokemon = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(findPokemonsArrayOfData.pending, (state: any) => {
+      .addCase(findAllPokemonsArrayOfData.pending, (state: any) => {
         return (state = { ...state, status: "loading" });
       })
-      .addCase(findPokemonsArrayOfData.fulfilled, (state: any, action: any) => {
-        return (state = {
-          ...state,
-          status: "completed",
-          arrayOfPokemons: action.payload,
-        });
-      })
-      .addCase(findPokemonsArrayOfData.rejected, (state: any, action: any) => {
-        if (action.error?.code === "ECONNABORTED") {
-          return (state = { ...state });
+      .addCase(
+        findAllPokemonsArrayOfData.fulfilled,
+        (state: any, action: any) => {
+          return (state = {
+            ...state,
+            status: "completed",
+            arrayOfPokemons: action.payload,
+          });
         }
-        return (state = {
-          ...state,
-          status: "failed",
-          message: action.payload?.message,
-        });
-      });
+      )
+      .addCase(
+        findAllPokemonsArrayOfData.rejected,
+        (state: any, action: any) => {
+          if (action.error?.code === "ECONNABORTED") {
+            return (state = { ...state });
+          }
+          return (state = {
+            ...state,
+            status: "failed",
+            message: action.payload?.message,
+          });
+        }
+      );
   },
 });
 

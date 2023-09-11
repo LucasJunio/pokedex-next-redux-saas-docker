@@ -9,7 +9,7 @@ interface InitialState {
 }
 
 export const findAllPokemonsArrayOfData = createAsyncThunk(
-  "poke/findAllPokemonsArrayOfData ",
+  "pokemon/findAllPokemonsArrayOfData",
   async () => {
     const data: PokemonEntity[] = await getPokemonsArrayOfData();
     return data;
